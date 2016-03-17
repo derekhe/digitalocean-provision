@@ -5,19 +5,6 @@
   connection: local
   gather_facts: yes
 
-  vars:
-    regions:
-      "1":  "ams2"
-      "2":  "ams3"
-      "3":  "fra1"
-      "4":  "lon1"
-      "5":  "nyc1"
-      "6":  "nyc2"
-      "7":  "nyc3"
-      "8":  "sfo1"
-      "9":  "sgp1"
-      "10": "tor1"
-
   vars_prompt:
     - name: "do_region"
       prompt: >
@@ -38,7 +25,7 @@
 
     - name: "do_server_name"
       prompt: "\nWhat should the server be named? Press enter for default.\n"
-      default: "DigitalOcean"
+      default: "debian-8-x64-dev"
       private: no
 
     - name: "do_access_token"
@@ -52,3 +39,5 @@
 
   roles:
     - digitalocean
+
+- include: serverconfig.yml

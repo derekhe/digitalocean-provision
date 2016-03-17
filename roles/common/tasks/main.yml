@@ -1,0 +1,4 @@
+---
+- name: install pkg
+  apt: name=apt-transport-https
+      

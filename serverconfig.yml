@@ -3,3 +3,9 @@
   hosts: digitalocean-host
 
   remote_user: root
+  vars:
+    nodejs_version: "5.x"
+
+  roles:
+    - common
+    - geerlingguy.nodejs
